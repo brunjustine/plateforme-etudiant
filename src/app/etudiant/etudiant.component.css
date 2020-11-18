@@ -1,0 +1,25 @@
+
+.etudiant
+{   
+    border-style: dashed;
+    margin: 0 auto;
+    text-align: center;
+    width:40%;
+    margin-bottom: 2%;
+}
+
+
+ul {
+    margin-left: 20%;
+    text-align: left;
+}
+
+li {
+    list-style: none;
+}
+
+img 
+{
+    width:40%;
+}
+

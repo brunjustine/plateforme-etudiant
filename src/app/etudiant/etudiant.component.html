@@ -1,0 +1,14 @@
+<div class="etudiant">
+    <h2>Profil étudiant :</h2>
+    <ul>
+        <li>Nom : {{profil.nom}}</li>
+        <li>Prénom : {{profil.prenom}}</li>
+        <li>Mail : {{profil.mail}}</li>
+        <li>Age :{{profil.age}}</li>
+    </ul>
+    <h3>Spécialités :</h3>
+    <ul *ngFor="let s of profil.specialites" >
+        <li >{{s}}</li>
+    </ul>
+    <img [src]="profil.photo">
+</div>
