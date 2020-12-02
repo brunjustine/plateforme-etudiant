@@ -1,1 +1,11 @@
 <p>contact works!</p>
+
+    <form>
+        <input name="nom" [(ngModel)]="contact.nom" (input)=suiviInput() placeholder="Nom" type='text' required>
+        <input name="prenom" [(ngModel)]="contact.prenom" placeholder="Prenom" type='text' required>
+        <input name="mail" [(ngModel)]="contact.mail" placeholder="Email" type='email' required>
+        <textarea name="option" [(ngModel)]="contact.option" placeholder="Option" ></textarea>
+        <input name="photo" [(ngModel)]="contact.photo" placeholder="photo" type='text' required>
+        <input type="submit" value="ENVOYER">
+        <input type="reset" value="RESET">
+    </form>

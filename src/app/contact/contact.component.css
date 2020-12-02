@@ -1,0 +1,10 @@
+form {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+}
+
+input, textarea {
+    margin:auto;
+    padding : 8px 16 px;
+}

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule} from '@angular/common/http'
+import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { EtudiantComponent } from './etudiant/etudiant.component';
 import { ListeEtudiantComponent } from './liste-etudiant/liste-etudiant.component';
 import { Erreur404Component } from './erreur404/erreur404.component';
 import { ContactComponent } from './contact/contact.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
