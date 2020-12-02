@@ -1,14 +1,16 @@
 <div class="etudiant">
-    <h2>Profil étudiant :</h2>
+    <h1 class="title">{{servEtu.listeEtudiants[idEtudiant].nom}} {{servEtu.listeEtudiants[idEtudiant].prenom}}</h1>
     <ul>
-        <li>Nom : {{profil.nom}}</li>
-        <li>Prénom : {{profil.prenom}}</li>
-        <li>Mail : {{profil.mail}}</li>
-        <li>Age :{{profil.age}}</li>
+        <li><span class="field">Mail : </span>{{servEtu.listeEtudiants[idEtudiant].mail}}</li>
+        <li><span class="field">Age : </span>{{servEtu.listeEtudiants[idEtudiant].age}}</li>
     </ul>
-    <h3>Spécialités :</h3>
-    <ul *ngFor="let s of profil.specialites" >
-        <li >{{s}}</li>
-    </ul>
-    <img [src]="profil.photo">
+    <div>
+    <h1>Spécialités :</h1>
+    <div class="divSpec">
+        <ul *ngFor="let s of servEtu.listeEtudiants[idEtudiant].specialites" class="option">
+            <li >{{s}}</li>
+        </ul>
+    </div>
+    <img [src]="servEtu.listeEtudiants[idEtudiant].photo">
+
 </div>

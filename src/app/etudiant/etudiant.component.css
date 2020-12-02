@@ -1,7 +1,11 @@
+.title {
+    font-size: 200%;
+}
 
 .etudiant
 {   
-    border-style: dashed;
+    padding:1%;
+    box-shadow:2px 1px 10px -5px black;
     margin: 0 auto;
     text-align: center;
     width:40%;
@@ -14,12 +18,42 @@ ul {
     text-align: left;
 }
 
+.option {
+    display: table-cell;
+}
+
+.option li{
+    box-shadow:2px 1px 10px -6px gray;
+    text-align: center;
+    border-radius: 2px;
+    border-width: 2px;
+    border-color: lightgray;
+    border-style: solid;
+    width:120%;
+    padding: 10px;
+}
+
+.divSpec {
+    padding:2%;
+    line-height: 200%;
+}
+
 li {
     list-style: none;
 }
 
 img 
-{
+{   
+    padding:2%;
     width:40%;
 }
 
+.field {
+    font-weight: bold;
+}
+
+
+
+img {
+    margin:2%;
+}

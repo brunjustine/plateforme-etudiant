@@ -8,6 +8,8 @@ import { MenuComponent } from './menu/menu.component';
 import { PiedComponent } from './pied/pied.component';
 import { EtudiantComponent } from './etudiant/etudiant.component';
 import { ListeEtudiantComponent } from './liste-etudiant/liste-etudiant.component';
+import { Erreur404Component } from './erreur404/erreur404.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ListeEtudiantComponent } from './liste-etudiant/liste-etudiant.componen
     MenuComponent,
     PiedComponent,
     EtudiantComponent,
-    ListeEtudiantComponent
+    ListeEtudiantComponent,
+    Erreur404Component,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
