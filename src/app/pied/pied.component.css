@@ -1,11 +1,21 @@
 
 li {
     display: inline-block;
-    padding :2%;
+    border-color: rgba(240, 240, 240, 0);
+    border-width: 0 10px 0px 10px;
+    border-style: solid;
+    padding:2%;
 }
+
 
 a:link ,a:visited,a:focus,a:hover,a:active{
     text-decoration: none;
     color:darkslategrey;
     font-size: 110%;
+    font-weight: bold;
+    background-color: rgba(0, 206, 209, 0);
 }
+ 
+li:hover {
+    background-color: rgba(47, 79, 79, 0.671);
+ }

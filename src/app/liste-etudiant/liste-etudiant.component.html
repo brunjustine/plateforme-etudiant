@@ -2,11 +2,13 @@
 <div *ngFor="let e of servEtu.listeEtudiants; let i =index">
     <div class="etudiant">
         <h1 class="title">{{e.nom}} {{e.prenom}}</h1>
+        <hr>
         <ul>
             <li><span class="field">Mail : </span>{{e.mail}}</li>
             <li><span class="field">Age : </span>{{e.age}}</li>
         </ul>
         <div>
+
         <h1>Spécialités :</h1>
         <div class="divSpec">
             <ul *ngFor="let s of e.specialites" class="option">

@@ -1,5 +1,6 @@
-<div class="etudiant">
+<div class="etudiant" *ngIf="idEtudiant>=0">
     <h1 class="title">{{servEtu.listeEtudiants[idEtudiant].nom}} {{servEtu.listeEtudiants[idEtudiant].prenom}}</h1>
+    <hr>
     <ul>
         <li><span class="field">Mail : </span>{{servEtu.listeEtudiants[idEtudiant].mail}}</li>
         <li><span class="field">Age : </span>{{servEtu.listeEtudiants[idEtudiant].age}}</li>

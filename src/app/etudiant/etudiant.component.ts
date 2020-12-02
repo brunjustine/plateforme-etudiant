@@ -10,7 +10,7 @@ import { EtudiantsService } from '../services/etudiants.service';
 export class EtudiantComponent implements OnInit {
 
   private sub : any;
-  idEtudiant : number | undefined;
+  idEtudiant : number =-1;
   
   constructor(public servEtu:EtudiantsService,  
     private route: ActivatedRoute,
@@ -18,9 +18,9 @@ export class EtudiantComponent implements OnInit {
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
-      this.idEtudiant = +params['idEtudiant']; // (+) converts string 'id' to a number
-
-      // In a real app: dispatch action to load the details here.
+      if (params['idEtudiant']) {
+        this.idEtudiant = +params['idEtudiant']; // (+) converts string 'id' to a number
+      }
    });
   }
 }

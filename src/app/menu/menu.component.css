@@ -13,8 +13,13 @@ a:link ,a:visited,a:focus,a:hover,a:active{
     color:white;
     font-size: 110%;
     font-weight: bold;
+    background-color: rgba(0, 206, 209, 0);
 }
 
 * {
     background-color: darkslategrey;
 }
+ 
+li:hover {
+background-color: rgba(255, 255, 255, 0.425);
+ }

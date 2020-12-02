@@ -1,0 +1,18 @@
+ [
+    {
+      "nom":"Toto",
+      "prenom":"Titi",
+      "specialites":["icc","ia","data science"],
+      "age":20,
+      "mail":"toto@mail.com",
+      "photo":"https://www.flaticon.com/svg/static/icons/svg/3135/3135715.svg"
+    },
+    {
+      "nom":"Tata",
+      "prenom":"Tutu",
+      "specialites":["icc"],
+      "age":22,
+      "mail":"tata@mail.com",
+      "photo":"https://www.flaticon.com/svg/static/icons/svg/3170/3170738.svg"
+    }
+  ]
