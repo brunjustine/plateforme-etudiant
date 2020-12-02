@@ -8,8 +8,8 @@
     <div>
     <h1>Spécialités :</h1>
     <div class="divSpec">
-        <ul *ngFor="let s of servEtu.listeEtudiants[idEtudiant].specialites" class="option">
-            <li >{{s}}</li>
+        <ul  class="option">
+            <li *ngFor="let s of servEtu.listeEtudiants[idEtudiant].specialites">{{s}}</li>
         </ul>
     </div>
     <img [src]="servEtu.listeEtudiants[idEtudiant].photo">

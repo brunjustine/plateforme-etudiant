@@ -1,6 +1,5 @@
-
-<div *ngFor="let e of servEtu.listeEtudiants; let i =index">
-    <div class="etudiant">
+<div id="listeEtudiants">
+    <div class="etudiant" *ngFor="let e of servEtu.listeEtudiants; let i =index">
         <h1 class="title">{{e.nom}} {{e.prenom}}</h1>
         <hr>
         <ul>
@@ -11,12 +10,14 @@
 
         <h1>Spécialités :</h1>
         <div class="divSpec">
-            <ul *ngFor="let s of e.specialites" class="option">
-                <li >{{s}}</li>
+            <ul class="option">
+                <li *ngFor="let s of e.specialites" >{{s}}</li>
             </ul>
+           
         </div>
         <a href routerLink="/etudiant/{{i}}">
             <img [src]="e.photo">
         </a>
-    </div>
 </div>
+</div>
+
