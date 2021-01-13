@@ -8,7 +8,6 @@ import { ListeEtudiantComponent } from './liste-etudiant/liste-etudiant.componen
 
 const routes: Routes = [
   {path:"", component:AccueilComponent},
-  {path:"etudiant", component:EtudiantComponent},
   {path:"etudiant/:idEtudiant", component:EtudiantComponent},
   {path:"listeEtudiant", component:ListeEtudiantComponent},
   {path:"contact", component:ContactComponent},

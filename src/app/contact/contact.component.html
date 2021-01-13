@@ -1,11 +1,43 @@
-<p>contact works!</p>
+<div class="container myForm">
+    <div class="card" style="width: 40%;">
+        <div class="card-header" style="text-align: center;">
+            Ajouter un nouvel étudiant
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="row mb-3">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Prénom" aria-label="First name">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Nom" aria-label="Last name">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                </div>
 
-    <form>
-        <input name="nom" [(ngModel)]="contact.nom" (input)=suiviInput() placeholder="Nom" type='text' required>
-        <input name="prenom" [(ngModel)]="contact.prenom" placeholder="Prenom" type='text' required>
-        <input name="mail" [(ngModel)]="contact.mail" placeholder="Email" type='email' required>
-        <textarea name="option" [(ngModel)]="contact.option" placeholder="Option" ></textarea>
-        <input name="photo" [(ngModel)]="contact.photo" placeholder="photo" type='text' required>
-        <input type="submit" value="ENVOYER">
-        <input type="reset" value="RESET">
-    </form>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputOptions">Options</label>
+                    <input type="text" class="form-control" id="inputOptions" aria-describedby="optionHelp" list="options">
+                    <datalist id="options">
+                        <option>ICC</option>
+                        <option>ERP</option>
+                    </datalist>
+                </div>
+
+                <div class="mb-3">
+                    <label for="photoFile" class="form-label">Photo de profil</label>
+                    <input class="form-control" type="file" id="photoFile" required>
+                </div>
+
+                <div class="col-12" class="btn-group">
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                </div>
+                
+                
+            </form>
+        </div>
+    </div>
+</div>

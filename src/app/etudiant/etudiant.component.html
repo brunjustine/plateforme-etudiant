@@ -1,17 +1,18 @@
 <div class="etudiant" *ngIf="idEtudiant>=0">
-    <h1 class="title">{{servEtu.listeEtudiants[idEtudiant].nom}} {{servEtu.listeEtudiants[idEtudiant].prenom}}</h1>
+    <h1 class="title">{{myEtudiant.nom}} {{myEtudiant.prenom}}</h1>
     <hr>
     <ul>
-        <li><span class="field">Mail : </span>{{servEtu.listeEtudiants[idEtudiant].mail}}</li>
-        <li><span class="field">Age : </span>{{servEtu.listeEtudiants[idEtudiant].age}}</li>
+        <li><span class="field">Mail : </span>{{myEtudiant.mail}}</li>
+        <li><span class="field">Age : </span>{{myEtudiant.age}}</li>
     </ul>
     <div>
     <h1>Spécialités :</h1>
     <div class="divSpec">
         <ul  class="option">
-            <li *ngFor="let s of servEtu.listeEtudiants[idEtudiant].specialites">{{s}}</li>
+            <li *ngFor="let s of myEtudiant.specialites">{{s}}</li>
         </ul>
     </div>
-    <img [src]="servEtu.listeEtudiants[idEtudiant].photo">
+   
+    <img [src]="myEtudiant.photo">
 
 </div>

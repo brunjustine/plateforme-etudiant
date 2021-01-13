@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Profil } from '../modele/profil';
 import { EtudiantsService } from '../services/etudiants.service';
 
 @Component({
@@ -10,7 +11,9 @@ import { EtudiantsService } from '../services/etudiants.service';
 export class EtudiantComponent implements OnInit {
 
   private sub : any;
-  idEtudiant : number =-1;
+  public myEtudiant : Profil | undefined;
+  @Input() idEtudiant : number =-1;
+
   
   constructor(public servEtu:EtudiantsService,  
     private route: ActivatedRoute,
@@ -20,7 +23,9 @@ export class EtudiantComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       if (params['idEtudiant']) {
         this.idEtudiant = +params['idEtudiant']; // (+) converts string 'id' to a number
+        this.myEtudiant = this.servEtu.listeEtudiants[this.idEtudiant]
       }
    });
   }
+
 }
