@@ -1,13 +1,16 @@
 <main>
   <header>
-    <h1> Projet : {{title}}</h1>
-    <app-menu></app-menu>
+    <div class="container">
+      <h1> Projet : {{title}}</h1>
+      <app-menu></app-menu>
+    </div>
   </header>
   <section>
     <router-outlet></router-outlet>
   </section>
-  <footer>
-    <hr>
+
+  
+  <footer class="bg-light text-center text-lg-start">
     <app-pied></app-pied>
   </footer>
 </main>

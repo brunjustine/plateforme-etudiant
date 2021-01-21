@@ -2,3 +2,22 @@
     color:rgb(59, 59, 59);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+header {
+    background-color:darkslategrey;
+    
+}
+header h1 {
+    color:white;
+    padding:1%;
+    
+}
+section {
+    margin-bottom: 20%;
+}
+
+footer {
+    position:fixed;
+    bottom:0;
+    width:100%;
+ }

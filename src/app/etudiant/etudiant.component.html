@@ -1,18 +1,24 @@
 <div class="etudiant" *ngIf="idEtudiant>=0">
-    <h1 class="title">{{myEtudiant.nom}} {{myEtudiant.prenom}}</h1>
-    <hr>
-    <ul>
-        <li><span class="field">Mail : </span>{{myEtudiant.mail}}</li>
-        <li><span class="field">Age : </span>{{myEtudiant.age}}</li>
-    </ul>
-    <div>
-    <h1>Spécialités :</h1>
-    <div class="divSpec">
-        <ul  class="option">
-            <li *ngFor="let s of myEtudiant.specialites">{{s}}</li>
+    <div *ngIf="myEtudiant">
+        <h1 class="title">{{myEtudiant.nom}} {{myEtudiant.prenom}}</h1>
+        <hr>
+        <ul>
+            <li><span class="field">Mail : </span>{{myEtudiant.mail}}</li>
+            <li><span class="field">Age : </span>{{myEtudiant.age}}</li>
         </ul>
+        <div>
+        <h1>Spécialités :</h1>
+        <div class="divSpec">
+            <ul  class="option">
+                <li *ngFor="let s of myEtudiant.specialites">{{s}}</li>
+            </ul>
+        </div>
+    
+        <img [src]="myEtudiant.photo">
     </div>
-   
-    <img [src]="myEtudiant.photo">
+    <button type="button" class="btn btn-secondary" (click)="editInput()">Editer</button>
+</div>
 
+<div *ngIf="openModal" style="visibility: visible;">
+    <app-etudiant-form [etudiant]= myEtudiant [id]=idEtudiant></app-etudiant-form>    
 </div>

@@ -13,6 +13,7 @@ import { ListeEtudiantComponent } from './liste-etudiant/liste-etudiant.componen
 import { Erreur404Component } from './erreur404/erreur404.component';
 import { ContactComponent } from './contact/contact.component';
 import { from } from 'rxjs';
+import { EtudiantFormComponent } from './etudiant-form/etudiant-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { from } from 'rxjs';
     EtudiantComponent,
     ListeEtudiantComponent,
     Erreur404Component,
-    ContactComponent
+    ContactComponent,
+    EtudiantFormComponent
   ],
   imports: [
     BrowserModule,

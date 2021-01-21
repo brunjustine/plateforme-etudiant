@@ -11,7 +11,8 @@ import { EtudiantsService } from '../services/etudiants.service';
 export class EtudiantComponent implements OnInit {
 
   private sub : any;
-  public myEtudiant : Profil | undefined;
+  public myEtudiant: Profil | undefined;
+  public openModal : boolean = false;
   @Input() idEtudiant : number =-1;
 
   
@@ -28,4 +29,7 @@ export class EtudiantComponent implements OnInit {
    });
   }
 
+  editInput() {
+    this.openModal = true;
+  }
 }

@@ -1,4 +1,4 @@
-<div id="listeEtudiants">
+<div id="listeEtudiants" class="container">
     <div class="etudiant" *ngFor="let e of servEtu.listeEtudiants; let i =index">
         <h1 class="title">{{e.nom}} {{e.prenom}}</h1>
         <hr>
@@ -8,7 +8,7 @@
         </ul>
         <div>
 
-        <h1>Spécialités :</h1>
+        <h5>Spécialités :</h5>
         <div class="divSpec">
             <ul class="option">
                 <li *ngFor="let s of e.specialites" >{{s}}</li>

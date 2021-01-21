@@ -7,7 +7,7 @@ import { Profil } from '../modele/profil';
 })
 export class EtudiantsService {
   listeEtudiants : Array<Profil> = [];
-
+  
   constructor(private http:HttpClient) { 
     /* Requete Ajajx pour aller chercher la liste des etudiants*/
     this.http.get<Array<Profil>>("/assets/data/etudiants.json").subscribe(
@@ -16,4 +16,14 @@ export class EtudiantsService {
       }
     )
   }
+
+  async addStudent(student : Profil, id:number) {
+    if (id ==undefined) {
+      this.listeEtudiants.push(student);
+    } else {
+      this.listeEtudiants[id]=student;
+    }
+  }
+
+  
 }
