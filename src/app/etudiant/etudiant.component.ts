@@ -9,9 +9,7 @@ import { EtudiantsService } from '../services/etudiants.service';
   styleUrls: ['./etudiant.component.css']
 })
 export class EtudiantComponent implements OnInit {
-
   private sub : any;
-  public myEtudiant: Profil | undefined;
   public openModal : boolean = false;
   @Input() idEtudiant : number =-1;
 
@@ -24,10 +22,8 @@ export class EtudiantComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       if (params['idEtudiant']) {
         this.idEtudiant = +params['idEtudiant']; // (+) converts string 'id' to a number
-        this.myEtudiant = this.servEtu.listeEtudiants[this.idEtudiant];
       }
    });
-   console.log(this.servEtu.listeEtudiants);
   }
 
   editInput() {
