@@ -1,0 +1,46 @@
+
+<div *ngIf="etudiant" class="container myForm">
+    <div class="card" style="width: 40%;">
+        <div class="card-header" style="text-align: center;">
+            Ajouter un nouvel étudiant
+        </div>
+        <div class="card-body">
+            <form (ngSubmit)="onSubmit(etudiantForm)" #etudiantForm="ngForm" class="needs-validation" novalidate>
+                <div class="row mb-3">
+                    <div class="col">
+                        <input type="text" name="prenom" [(ngModel)]="etudiant.prenom" class="form-control" placeholder="Prénom" aria-label="First name" required>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="nom" [(ngModel)]="etudiant.nom" class="form-control" placeholder="Nom" aria-label="Last name" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input type="email" name="mail" [(ngModel)]="etudiant.mail" class="form-control" id="inputEmail" placeholder="Email" required>
+                </div>
+
+                <div class="mb-3">
+                    <input type="text" name="age" [(ngModel)]="etudiant.age" class="form-control" id="inputAge" placeholder="Age" required>
+                </div>
+
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputSpecialites">Options</label>
+                    <input type="text" name="specialites" [(ngModel)]="etudiant.specialites" class="form-control" id="inputSpecialites" aria-describedby="optionHelp" list="options">
+                    <datalist id="options">
+                        <option>ICC</option>
+                        <option>ERP</option>
+                    </datalist>
+                </div>
+
+                <div class="mb-3">
+                    <label for="photoFile" class="form-label">Photo de profil</label>
+                    <input type="text" name="photo" [(ngModel)]="etudiant.photo" class="form-control" id="photoFile" placeholder="Copier le lien">
+                </div>
+
+                <div class="col-12" class="btn-group">
+                    <button type="submit" class="btn btn-primary" [disabled]="!etudiantForm.form.valid">Envoyer</button>
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
