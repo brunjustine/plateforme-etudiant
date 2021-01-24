@@ -18,15 +18,16 @@ export class EtudiantComponent implements OnInit {
   
   constructor(public servEtu:EtudiantsService,  
     private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router) {}
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
       if (params['idEtudiant']) {
         this.idEtudiant = +params['idEtudiant']; // (+) converts string 'id' to a number
-        this.myEtudiant = this.servEtu.listeEtudiants[this.idEtudiant]
+        this.myEtudiant = this.servEtu.listeEtudiants[this.idEtudiant];
       }
    });
+   console.log(this.servEtu.listeEtudiants);
   }
 
   editInput() {
