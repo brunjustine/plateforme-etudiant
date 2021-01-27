@@ -1,0 +1,11 @@
+{
+    "nom":"Lambda",
+    "prenom":"Omega",
+    "promo":"Ing3",
+    "photo":"lambda.jpg",
+    "mail":"toto@lambda.fr",
+    "specialites":[],
+    "age":21,
+    "statut":1,
+    "token":"JeSuisLeTokenDeSecurisationAvecDesDatasDedans"
+}

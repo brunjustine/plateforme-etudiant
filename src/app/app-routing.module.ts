@@ -6,6 +6,8 @@ import { ContactComponent } from './contact/contact.component';
 import { Erreur404Component } from './erreur404/erreur404.component';
 import { EtudiantComponent } from './etudiant/etudiant.component';
 import { ListeEtudiantComponent } from './liste-etudiant/liste-etudiant.component';
+import { EditionGuard } from './services/edition.guard';
+import { ConnexionComponent } from './connexion/connexion.component';
 
 const routes: Routes = [
   {path:"", component:AccueilComponent},
@@ -13,8 +15,12 @@ const routes: Routes = [
   {path:"listeEtudiant", component:ListeEtudiantComponent},
   {path:"etudiantForm", component:EtudiantFormComponent},
   {path:"contact", component:ContactComponent},
-  {path:"**", component:Erreur404Component}
-  
+  {path:"edition", loadChildren:()=>import('./edition/edition.module').then(e=>e.EditionModule), 
+  canActivate:[EditionGuard],
+  canLoad:[EditionGuard]
+  },
+  {path:"connexion" , component:ConnexionComponent},
+  {path:"**", component:Erreur404Component}  
 ];
 
 @NgModule({

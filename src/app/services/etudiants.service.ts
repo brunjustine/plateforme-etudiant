@@ -9,7 +9,6 @@ export class EtudiantsService {
   listeEtudiants : Array<Profil> = [];
   
   constructor(private http:HttpClient) { 
-    console.log("yo");
     /* Requete Ajajx pour aller chercher la liste des etudiants*/
     this.http.get<Array<Profil>>("/assets/data/etudiants.json").subscribe(
       data => {
@@ -26,5 +25,11 @@ export class EtudiantsService {
     }
   }
 
-  
+  getEtudiants() {
+    this.http.get<Array<Profil>>("/assets/data/etudiants.json").subscribe(
+      data => {
+        this.listeEtudiants = data;
+      }
+    )
+  }
 }

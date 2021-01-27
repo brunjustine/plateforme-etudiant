@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Profil } from '../modele/profil';
+import { Profil, ProfilI } from '../modele/profil';
 import { EtudiantsService } from '../services/etudiants.service';
 
 @Component({
@@ -9,31 +9,23 @@ import { EtudiantsService } from '../services/etudiants.service';
   styleUrls: ['./etudiant-form.component.css']
 })
 export class EtudiantFormComponent implements OnInit {
-  @Input() etudiant:Profil|undefined;
+  @Input() etudiant:ProfilI|undefined;
   @Input() id:number =-1;
-  etudiantFormat!: Profil;
+  etudiantFormat!: ProfilI;
 
   constructor(public servEtu:EtudiantsService) { }
 
   ngOnInit(): void {
     if (this.etudiant==undefined) {
-      this.etudiant = {
-        _id:this.id,
-        nom:'',
-        prenom:'',
-        age:0,
-        mail:'',
-        specialites:[''],
-        photo:''
-      }
+      this.initEtudiant();
     }
   }
 
   onSubmit(form: NgForm) {
-    if (form.valid) {
-      this.formatFormValue(form);
-      this.servEtu.addStudent(this.etudiantFormat, this.id);
-    }
+    //if (form.valid) {
+    //  //this.formatFormValue(form);
+    //  //this.servEtu.addStudent(this.etudiantFormat, this.id);
+    //}
   }
 
   formatFormValue(form: NgForm) {
@@ -44,6 +36,18 @@ export class EtudiantFormComponent implements OnInit {
       mail:form.value.mail,
       specialites:[form.value.specialites],
       photo:form.value.photo
+    }
+  }
+
+  initEtudiant() {
+    this.etudiant = {
+      _id:this.id,
+      nom:'',
+      prenom:'',
+      age:0,
+      mail:'',
+      specialites:[''],
+      photo:''
     }
   }
 }

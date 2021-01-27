@@ -11,6 +11,7 @@ export class ListeEtudiantComponent implements OnInit {
   constructor(public servEtu:EtudiantsService) { }
 
   ngOnInit(): void {
+    this.servEtu.getEtudiants();
   }
 
 }

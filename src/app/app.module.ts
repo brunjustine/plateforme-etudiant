@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,9 @@ import { Erreur404Component } from './erreur404/erreur404.component';
 import { ContactComponent } from './contact/contact.component';
 import { from } from 'rxjs';
 import { EtudiantFormComponent } from './etudiant-form/etudiant-form.component';
+import { ConnexionComponent } from './connexion/connexion.component';
+import { EtudiantsService } from './services/etudiants.service';
+import { AuthInterceptor } from './services/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { EtudiantFormComponent } from './etudiant-form/etudiant-form.component';
     ListeEtudiantComponent,
     Erreur404Component,
     ContactComponent,
-    EtudiantFormComponent
+    EtudiantFormComponent,
+    ConnexionComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,7 @@ import { EtudiantFormComponent } from './etudiant-form/etudiant-form.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [EtudiantsService, {provide:HTTP_INTERCEPTORS, useClass : AuthInterceptor, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,30 @@
+<div *ngIf="!isConnect;Else already_connect">
+    <div class="card" style="width: 40%;" >
+        <div class="card-header" style="text-align:center;">
+            Connexion
+        </div>
+        <div class="card-body">
+            <form #f="ngForm" (ngSubmit)="connexion()">
+                <div class="mb-3">
+                    <input class="form-control" name="id" [(ngModel)]="u.id" placeholder="Saisissez un identifiant" type="text" required>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" name="mdp" [(ngModel)]="u.mdp" placeholder="Saisissez un mot de passe" type="password" #ctlMdp="ngModel" required>
+                    <span *ngIf="ctlMdp.invalid">Incorrect Passsword</span>
+                </div>
+                <div class="col-12" class="btn-group ">
+                    <input type="submit" class="btn btn-primary" value="connexion" [disabled]="f.invalid">
+                    <input type="reset"  class="btn btn-primary" value="annuler">
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>
+
+<ng-template #already_connect>
+    <div class="container">
+        <p>Vous êtes déjà connecté</p>
+        <!-- TODO deoconnection-->
+    </div>
+</ng-template>
+

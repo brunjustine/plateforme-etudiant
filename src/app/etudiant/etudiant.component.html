@@ -21,6 +21,6 @@
     <button type="button" class="btn btn-secondary" (click)="editInput()">Editer</button>
 </div>
 
-<div *ngIf="openModal" style="visibility: visible;">
+<div id="etudiantForm" *ngIf="openModal" style="visibility: visible;">
     <app-etudiant-form [etudiant]= servEtu.listeEtudiants[idEtudiant] [id]=idEtudiant></app-etudiant-form>    
 </div>
