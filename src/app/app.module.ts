@@ -17,6 +17,7 @@ import { EtudiantFormComponent } from './etudiant-form/etudiant-form.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { EtudiantsService } from './services/etudiants.service';
 import { AuthInterceptor } from './services/auth.interceptor';
+import { E401Interceptor } from './services/e401.interceptor';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { AuthInterceptor } from './services/auth.interceptor';
     HttpClientModule,
     FormsModule
   ],
-  providers: [EtudiantsService, {provide:HTTP_INTERCEPTORS, useClass : AuthInterceptor, multi:true}],
+  providers: [EtudiantsService, {provide:HTTP_INTERCEPTORS, useClass : AuthInterceptor, multi:true}, {provide:HTTP_INTERCEPTORS, useClass: E401Interceptor, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
