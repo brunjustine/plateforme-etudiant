@@ -27,4 +27,10 @@ export class AuthService {
       }
     )
   }
+
+  deconnexionId() {
+        this.connectServ.connexion = false;
+        this.connectServ.statut=0;
+        this.profil = <ProfilI>{};
+  }
 }

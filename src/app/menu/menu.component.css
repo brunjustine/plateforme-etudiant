@@ -1,3 +1,6 @@
+* {
+    background-color: darkslategrey;
+}
 
 li {
     display: inline-block;
@@ -13,10 +16,17 @@ a:link ,a:visited,a:focus,a:hover,a:active{
     background-color: rgba(0, 206, 209, 0);
 }
 
-* {
-    background-color: darkslategrey;
-}
+
  
 li:hover {
 background-color: rgba(255, 255, 255, 0.425);
+ }
+
+.button-deco{
+    text-decoration: none;
+    color:white;
+    font-size: 110%;
+    font-weight: bold;
+    background-color: rgba(0, 206, 209, 0);
+    border-style: none;
  }

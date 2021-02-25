@@ -12,8 +12,9 @@
         <a href routerLink="edition">
             <li>Edition</li>
         </a>
-        <a href routerLink="connexion">
-            <li>Connexion</li>
+        <a  href routerLink="connexion">
+            <li *ngIf="!this.connectServ.connexion">Connexion</li>
+            <li *ngIf="this.connectServ.connexion"> <input  type="submit" class="button-deco" (click)="deconnexion()" value="déconnexion"></li>
         </a>
     </ul>
 </nav>

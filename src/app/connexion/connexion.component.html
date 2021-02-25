@@ -1,4 +1,4 @@
-<div *ngIf="!isConnect;Else already_connect">
+<div *ngIf="!isConnect">
     <div class="card" style="width: 40%;" >
         <div class="card-header" style="text-align:center;">
             Connexion
@@ -20,11 +20,4 @@
         </div>
     </div>    
 </div>
-
-<ng-template #already_connect>
-    <div class="container">
-        <p>Vous êtes déjà connecté</p>
-        <!-- TODO deoconnection-->
-    </div>
-</ng-template>
 

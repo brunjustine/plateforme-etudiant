@@ -7,6 +7,7 @@ import { UtilisateursEditComponent } from './utilisateurs-edit/utilisateurs-edit
 
 const routes = [
   {path:'', component:AccueilEditComponent, children:[
+    {path:'', component:EtudiantEditComponent},
     {path:'etudiant', component:EtudiantEditComponent},
     {path:'utilisateurs', component:UtilisateursEditComponent}
   ]}
