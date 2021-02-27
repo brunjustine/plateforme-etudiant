@@ -5,7 +5,10 @@
       "specialites":["icc","ia","data science"],
       "age":20,
       "mail":"toto@mail.com",
-      "photo":"https://www.flaticon.com/svg/static/icons/svg/3135/3135715.svg"
+      "photo":"https://www.flaticon.com/svg/static/icons/svg/3135/3135715.svg",
+      "statut" : 0,
+      "token" : "",
+      "_id":0
     },
     {
       "nom":"Tata",
@@ -13,7 +16,11 @@
       "specialites":["icc"],
       "age":22,
       "mail":"tata@mail.com",
-      "photo":"https://www.flaticon.com/svg/static/icons/svg/3170/3170738.svg"
+      "photo":"https://www.flaticon.com/svg/static/icons/svg/3170/3170738.svg",
+      "statut" : 0,
+      "token" : "",
+      "_id":1
+      
     },
     {
       "nom":"Titi",
@@ -21,7 +28,11 @@
       "specialites":["smart system","ia","erp","icc"],
       "age":25,
       "mail":"titi@mail.com",
-      "photo":"https://www.flaticon.com/svg/static/icons/svg/3011/3011270.svg"
+      "photo":"https://www.flaticon.com/svg/static/icons/svg/3011/3011270.svg",
+      "statut" : 0,
+      "token" : "",
+      "_id":2
+
     }
     ,{
       "nom":"Tutu",
@@ -29,7 +40,11 @@
       "specialites":["ia","erp","icc"],
       "age":50,
       "mail":"titi@mail.com",
-      "photo":"https://www.flaticon.com/svg/static/icons/svg/3638/3638191.svg"
+      "photo":"https://www.flaticon.com/svg/static/icons/svg/3638/3638191.svg",
+      "statut" : 0,
+      "token" : "",
+      "_id":3
+
     }
     ,
     {
@@ -38,6 +53,9 @@
       "specialites":["ia","erp","finance"],
       "age":80,
       "mail":"titi@mail.com",
-      "photo":"https://www.flaticon.com/svg/static/icons/svg/3011/3011503.svg"
+      "photo":"https://www.flaticon.com/svg/static/icons/svg/3011/3011503.svg",
+      "statut" : 0,
+      "token" : "",
+      "_id":4
     }
   ]

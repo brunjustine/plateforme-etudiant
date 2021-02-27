@@ -14,7 +14,7 @@ export class Profil implements ProfilI{
     _id = 0;
     nom = "";
     prenom = "";
-    specialites = [];
+    specialites = [""];
     mail = "";
     age = 0;
     photo = "";

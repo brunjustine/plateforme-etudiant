@@ -1,3 +1,48 @@
-<div class="container">
-    <h4>Bienvenue dans le menu d'édition des utilisateurs</h4>
+<div class="card" style="width: 40%;">
+    <div class="card-header" style="text-align:center;">
+        Bienvenue dans le menu d'édition des utilisateurs
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #utilisateurForm="ngForm" class="needs-validation" novalidate>
+            <div class="row mb-3">
+                <div class="col">
+                    <input type="text" name="prenom" [(ngModel)]="utilisateur.prenom"  #ctlNom="ngModel" class="form-control" placeholder="Prénom" aria-label="First name" required minlength=4>
+                    <span *ngIf="ctlNom.invalid">Merci de saisir un nom d'au mois 4 caractères</span>
+                </div>
+                <div class="col">
+                    <input type="text" name="nom" [(ngModel)]="utilisateur.nom" class="form-control" placeholder="Nom" aria-label="Last name" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <input type="email" name="mail" [(ngModel)]="utilisateur.mail" class="form-control" id="inputEmail" placeholder="Email" required>
+            </div>
+
+            <div class="mb-3">
+                <input type="password" name="pwd" class="form-control" id="inputPwd" placeholder="password" required>
+            </div>
+    
+            <div class="mb-3">
+                <input type="text" name="age" [(ngModel)]="utilisateur.age" class="form-control" id="inputAge" placeholder="Age" required>
+            </div>
+    
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="inputSpecialites">Options</label>
+                <input type="text" name="specialites" [(ngModel)]="utilisateur.specialites" class="form-control" id="inputSpecialites" aria-describedby="optionHelp" list="options">
+                <datalist id="options">
+                    <option>ICC</option>
+                    <option>ERP</option>
+                </datalist>
+            </div>
+    
+            <div class="mb-3">
+                <label for="photoFile" class="form-label">Photo de profil</label>
+                <input type="text" name="photo" [(ngModel)]="utilisateur.photo" class="form-control" id="photoFile" placeholder="Copier le lien">
+            </div>
+    
+            <div class="col-12" class="btn-group">
+                <button type="submit" class="btn btn-primary" [disabled]="!utilisateurForm.form.valid">Envoyer</button>
+                <button type="reset" class="btn btn-primary">Reset</button>
+            </div>
+        </form>
+    </div>
 </div>

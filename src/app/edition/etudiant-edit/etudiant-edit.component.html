@@ -3,7 +3,13 @@
         Bienvenue dans le menu d'édition des étudiants
     </div>
     <div class="card-body">
-        <form (ngSubmit)="onSubmit()" #etudiantForm="ngForm" class="needs-validation" novalidate>
+        <form (ngSubmit)="onSubmit(etudiantForm)" #etudiantForm="ngForm" class="needs-validation" novalidate>
+            <div class="row mb-3">
+                <select class="form-select" #selectEtudiant aria-label="Default select example" (change)="ChangingStudent(selectEtudiant.value)">
+                    <option [value]="-1" selected >Choisissez un étudiant</option>
+                    <option *ngFor="let option of servEtu.listeEtudiants;" [value]="option._id">{{option.mail}}</option>
+                  </select>
+            </div>
             <div class="row mb-3">
                 <div class="col">
                     <input type="text" name="prenom" [(ngModel)]="etudiant.prenom"  #ctlNom="ngModel" class="form-control" placeholder="Prénom" aria-label="First name" required minlength=4>

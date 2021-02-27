@@ -6,12 +6,15 @@
         <a href routerLink="/listeEtudiant">
             <li>Liste des étudiants</li>
         </a>
-        <a href routerLink="/etudiantForm">
-            <li>Ajouter un étudiant</li>
-        </a>
-        <a href routerLink="edition">
+       
+        <a *ngIf="this.connectServ.connexion" href routerLink="edition">
             <li>Edition</li>
         </a>
+        
+        <a *ngIf="this.connectServ.connexion" href routerLink="/etudiantForm">
+            <li>Ajouter un étudiant</li>
+        </a>
+
         <a  href routerLink="connexion">
             <li *ngIf="!this.connectServ.connexion">Connexion</li>
             <li *ngIf="this.connectServ.connexion"> <input  type="submit" class="button-deco" (click)="deconnexion()" value="déconnexion"></li>

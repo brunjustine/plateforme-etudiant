@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EtudiantsService } from './services/etudiants.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title:string = 'EISTI 2020 / CloudFront';
+
+  constructor(public servEtu:EtudiantsService) { }
+  ngOnInit(): void {
+    this.servEtu.getEtudiants();
+  }
 }

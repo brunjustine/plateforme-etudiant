@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Profil } from '../modele/profil';
+import { ConnecteService } from '../services/connecte.service';
 import { EtudiantsService } from '../services/etudiants.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class EtudiantComponent implements OnInit {
   @Input() idEtudiant : number =-1;
 
   
-  constructor(public servEtu:EtudiantsService,  
+  constructor(public servEtu:EtudiantsService,
+    public connectServ:ConnecteService,  
     private route: ActivatedRoute,
     private router: Router) {}
 

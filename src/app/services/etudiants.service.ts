@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Profil } from '../modele/profil';
+import { Profil, ProfilI } from '../modele/profil';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,8 @@ export class EtudiantsService {
   constructor(private http:HttpClient) {}
 
   async addStudent(student : Profil, id:number) {
-    if (id ==undefined) {
+    if ((id ==undefined) || (id==-1)) {
+      this.getEtudiants
       this.listeEtudiants.push(student);
     } else {
       this.listeEtudiants[id]=student;
