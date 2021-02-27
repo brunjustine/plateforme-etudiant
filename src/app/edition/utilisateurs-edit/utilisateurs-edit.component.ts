@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Profil, ProfilI } from 'src/app/modele/profil';
+import { UtilisateursService } from 'src/app/services/utilisateurs.service';
 
 @Component({
   selector: 'app-utilisateurs-edit',
@@ -7,15 +8,18 @@ import { Profil, ProfilI } from 'src/app/modele/profil';
   styleUrls: ['./utilisateurs-edit.component.css']
 })
 export class UtilisateursEditComponent implements OnInit {
-  utilisateur : ProfilI = <ProfilI>{};
+  utilisateur : Profil=<Profil>{} ;
 
-  constructor() { }
+  constructor(public utilServ:UtilisateursService) { }
 
   ngOnInit(): void {
-    this.utilisateur = new Profil();
   }
 
   onSubmit() {
     
+  }
+
+  ChangingUtilisateur(idUtilisateur: string) {
+    this.utilisateur = this.utilServ.getUtilisateurById(+idUtilisateur)
   }
 }

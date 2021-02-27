@@ -5,6 +5,12 @@
     <div class="card-body">
         <form (ngSubmit)="onSubmit()" #utilisateurForm="ngForm" class="needs-validation" novalidate>
             <div class="row mb-3">
+                <select class="form-select" #selectUtilisateur aria-label="Default select example" (change)="ChangingUtilisateur(selectUtilisateur.value)">
+                    <option [value]="-1" selected >Choisissez un utilisateur</option>
+                    <option *ngFor="let option of utilServ.listeUtilisateurs;" [value]="option._id">{{option.mail}}</option>
+                  </select>
+            </div>
+            <div class="row mb-3">
                 <div class="col">
                     <input type="text" name="prenom" [(ngModel)]="utilisateur.prenom"  #ctlNom="ngModel" class="form-control" placeholder="Prénom" aria-label="First name" required minlength=4>
                     <span *ngIf="ctlNom.invalid">Merci de saisir un nom d'au mois 4 caractères</span>
@@ -17,9 +23,9 @@
                 <input type="email" name="mail" [(ngModel)]="utilisateur.mail" class="form-control" id="inputEmail" placeholder="Email" required>
             </div>
 
-            <div class="mb-3">
+            <!--<div class="mb-3">
                 <input type="password" name="pwd" class="form-control" id="inputPwd" placeholder="password" required>
-            </div>
+            </div>-->
     
             <div class="mb-3">
                 <input type="text" name="age" [(ngModel)]="utilisateur.age" class="form-control" id="inputAge" placeholder="Age" required>
